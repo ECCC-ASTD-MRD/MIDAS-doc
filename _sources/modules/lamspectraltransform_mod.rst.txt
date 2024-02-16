@@ -1,0 +1,22 @@
+==========================================
+lamSpectralTransform_mod
+==========================================
+
+    :doc:`link to source code <lamspectraltransform_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /lamSpectralTransform_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /lamSpectralTransform_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: lamspectraltransform_mod
+

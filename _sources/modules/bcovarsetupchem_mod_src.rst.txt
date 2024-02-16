@@ -1,0 +1,8 @@
+==========================================
+bCovarSetupChem_mod source
+==========================================
+
+    .. literalinclude:: ../_src_files/bCovarSetupChem_mod.f90
+       :language: fortran
+       :linenos:
+

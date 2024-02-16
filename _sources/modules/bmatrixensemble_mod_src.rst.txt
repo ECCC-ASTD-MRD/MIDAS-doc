@@ -1,0 +1,8 @@
+==========================================
+bMatrixEnsemble_mod source
+==========================================
+
+    .. literalinclude:: ../_src_files/bMatrixEnsemble_mod.f90
+       :language: fortran
+       :linenos:
+

@@ -1,0 +1,17 @@
+==========================================
+midas_ensembleH
+==========================================
+
+    :doc:`link to source code <midas_ensembleH_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /midas_ensembleH.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+
+    .. f:autoprogram:: midas_ensembleH
+

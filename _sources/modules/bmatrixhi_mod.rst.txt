@@ -1,0 +1,22 @@
+==========================================
+bMatrixHI_mod
+==========================================
+
+    :doc:`link to source code <bmatrixhi_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /bMatrixHI_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /bMatrixHI_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: bmatrixhi_mod
+

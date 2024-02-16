@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>analysisErrorOI_mod &#8212; MIDAS  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="backgroundCheck_mod" href="backgroundcheck_mod.html" />
+    <link rel="prev" title="midas_var" href="../programs/midas_var.html" /> 
+  </head><body>
+  <div>
+    <img src="../_static/MIDAS_header.png" alt="MIDAS" />
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="right" >
+          <a href="backgroundcheck_mod.html" title="backgroundCheck_mod"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../programs/midas_var.html" title="midas_var"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">analysisErrorOI_mod</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../programs/midas_var.html"
+                          title="previous chapter">midas_var</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="backgroundcheck_mod.html"
+                          title="next chapter">backgroundCheck_mod</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/analysiserroroi_mod.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="analysiserroroi-mod">
+<h1>analysisErrorOI_mod<a class="headerlink" href="#analysiserroroi-mod" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><a class="reference internal" href="analysiserroroi_mod_src.html"><span class="doc">link to source code</span></a></p>
+<p><strong>Dependency Diagrams:</strong></p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="analysisErrorOI_mod.svg"><img alt="analysisErrorOI_mod.svg" height="100px" src="analysisErrorOI_mod.svg" /></a>
+<figcaption>
+<p><span class="caption-text">Direct Dependency Diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="analysisErrorOI_mod_rev.svg"><img alt="analysisErrorOI_mod_rev.svg" height="100px" src="analysisErrorOI_mod_rev.svg" /></a>
+<figcaption>
+<p><span class="caption-text">Reverse Dependency Diagram</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<span class="target" id="f/analysiserroroi_mod"></span><p class="rubric">Description</p>
+<p>MODULE analysisErrorOI_mod (prefix=’aer’ category=’1. High-level functionality’)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Purpose</dt>
+<dd class="field-odd"><p>Calculate the analysis-error standard deviation.
+The method used is Optimal Interpolation,
+where it is assumed that only a subset of the
+total number of observations influence the analysis at a given grid point.</p>
+</dd>
+</dl>
+<p class="rubric">Quick access</p>
+<dl class="field-list simple">
+<dt class="field-odd">Types</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/struct_neighborhood" title="f/analysiserroroi_mod/struct_neighborhood"><code class="xref f f-type docutils literal notranslate"><span class="pre">struct_neighborhood</span></code></a></p>
+</dd>
+<dt class="field-even">Routines</dt>
+<dd class="field-even"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_analysiserror" title="f/analysiserroroi_mod/aer_analysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_analysiserror()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_computeanlerrorstd" title="f/analysiserroroi_mod/aer_computeanlerrorstd"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_computeanlerrorstd()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_dayssincelastobs" title="f/analysiserroroi_mod/aer_dayssincelastobs"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_dayssincelastobs()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_propagateanalysiserror" title="f/analysiserroroi_mod/aer_propagateanalysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_propagateanalysiserror()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_propagatedslo" title="f/analysiserroroi_mod/aer_propagatedslo"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_propagatedslo()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/findobs" title="f/analysiserroroi_mod/findobs"><code class="xref f f-func docutils literal notranslate"><span class="pre">findobs()</span></code></a></p>
+</dd>
+</dl>
+<p class="rubric">Needed modules</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="columndata_mod.html#f/columndata_mod" title="f/columndata_mod: MODULE columnData_mod (prefix='col' category='6. High-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">columndata_mod</span></code></a>: MODULE columnData_mod (prefix=’col’ category=’6. High-level data objects’)</p></li>
+<li><p><a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod" title="f/gridstatevector_mod: MODULE gridStateVector_mod (prefix='gsv' category='6. High-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">gridstatevector_mod</span></code></a>: MODULE gridStateVector_mod (prefix=’gsv’ category=’6. High-level data objects’)</p></li>
+<li><p><a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod" title="f/gridstatevectorfileio_mod: MODULE gridStateVectorFileIO_mod (prefix='gio' category='4. Data Object transformations')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">gridstatevectorfileio_mod</span></code></a>: MODULE gridStateVectorFileIO_mod (prefix=’gio’ category=’4. Data Object transformations’)</p></li>
+<li><p><a class="reference internal" href="kdtree2_mod.html#f/kdtree2_mod" title="f/kdtree2_mod: MODULE kdTree2_mod (prefix='kdtree2' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">kdtree2_mod</span></code></a>: MODULE kdTree2_mod (prefix=’kdtree2’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="midasmpi_mod.html#f/midasmpi_mod" title="f/midasmpi_mod: MODULE midasMpi_mod (prefix='mmpi' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">midasmpi_mod</span></code></a>: MODULE midasMpi_mod (prefix=’mmpi’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod" title="f/obsspacedata_mod: MODULE obsSpaceData_mod (prefix='obs' category='6. High-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">obsspacedata_mod</span></code></a>: MODULE obsSpaceData_mod (prefix=’obs’ category=’6. High-level data objects’)</p></li>
+<li><p><a class="reference internal" href="physicsfunctions_mod.html#f/physicsfunctions_mod" title="f/physicsfunctions_mod: MODULE physicsFunctions_mod (prefix='phf' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">physicsfunctions_mod</span></code></a>: MODULE physicsFunctions_mod (prefix=’phf’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod" title="f/statetocolumn_mod: MODULE stateToColumn_mod (prefix='s2c' category='4. Data Object transformations')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">statetocolumn_mod</span></code></a>: MODULE stateToColumn_mod (prefix=’s2c’ category=’4. Data Object transformations’)</p></li>
+<li><p><a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod" title="f/varnamelist_mod: MODULE varNameList_mod (prefix='vnl' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">varnamelist_mod</span></code></a>: MODULE varNameList_mod (prefix=’vnl’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod" title="f/utilities_mod: MODULE utilities_mod (prefix='utl' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">utilities_mod</span></code></a>: MODULE utilities_mod (prefix=’utl’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="horizontalcoord_mod.html#f/horizontalcoord_mod" title="f/horizontalcoord_mod: MODULE horizontalCoord_mod (prefix='hco' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">horizontalcoord_mod</span></code></a>: MODULE horizontalCoord_mod (prefix=’hco’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="verticalcoord_mod.html#f/verticalcoord_mod" title="f/verticalcoord_mod: MODULE verticalCoord_mod (prefix='vco' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">verticalcoord_mod</span></code></a>: MODULE verticalCoord_mod (prefix=’vco’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="obsoperators_mod.html#f/obsoperators_mod" title="f/obsoperators_mod: MODULE obsOperators_mod (prefix='oop' category='5. Observation operators')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">obsoperators_mod</span></code></a>: MODULE obsOperators_mod (prefix=’oop’ category=’5. Observation operators’)</p></li>
+<li><p><a class="reference internal" href="message_mod.html#f/message_mod" title="f/message_mod: MODULE message_mod (prefix='msg' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">message_mod</span></code></a>: MODULE message_mod (prefix=’msg’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="oceanmask_mod.html#f/oceanmask_mod" title="f/oceanmask_mod: MODULE oceanMask_mod (prefix='ocm' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">oceanmask_mod</span></code></a>: MODULE oceanMask_mod (prefix=’ocm’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="timecoord_mod.html#f/timecoord_mod" title="f/timecoord_mod: MODULE timeCoord_mod (prefix='tim' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">timecoord_mod</span></code></a>: MODULE timeCoord_mod (prefix=’tim’ category=’7. Low-level data objects’)</p></li>
+</ul>
+<p class="rubric">Types</p>
+<ul>
+<li><dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/struct_neighborhood">
+<em class="property"><span class="pre">type</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">struct_neighborhood</span></span><a class="headerlink" href="#f/analysiserroroi_mod/struct_neighborhood" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">bodyindex</span> (*)<em> [</em><em>integer </em><em>,</em><em>pointer</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">headerindex</span> (*)<em> [</em><em>integer </em><em>,</em><em>pointer</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">numobs</span><em> [</em><em>integer </em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">procindex</span> (*)<em> [</em><em>integer </em><em>,</em><em>pointer</em><em>]</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Variables</p>
+<p class="rubric">Subroutines and functions</p>
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/aer_analysiserror">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">aer_analysiserror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">obsspacedata</span></em>, <em class="sig-param"><span class="pre">hco_ptr</span></em>, <em class="sig-param"><span class="pre">vco_ptr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/aer_analysiserror" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>Calculate analysis-error variance.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>obsspacedata</strong><em> [</em><em>struct_obs </em><em>,</em><em>inout</em><em>]</em> :: observation data structure</p></li>
+<li><p><strong>hco_ptr</strong><em> [</em><em>struct_hco </em><em>,</em><em>in,pointer</em><em>]</em> :: horizontal grid definition</p></li>
+<li><p><strong>vco_ptr</strong><em> [</em><em>struct_vco </em><em>,</em><em>in,pointer</em><em>]</em> :: vertical grid definition</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../programs/midas_analysisErrorOI.html#f/midas_analysiserroroi" title="f/midas_analysiserroroi"><code class="xref f f-prog docutils literal notranslate"><span class="pre">midas_analysiserroroi</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_isnamelistpresent" title="f/utilities_mod/utl_isnamelistpresent"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_isnamelistpresent()</span></code></a>, <a class="reference internal" href="message_mod.html#f/message_mod/msg" title="f/message_mod/msg"><code class="xref f f-func docutils literal notranslate"><span class="pre">msg()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_varnameslist" title="f/gridstatevector_mod/gsv_varnameslist"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_varnameslist()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_allocate" title="f/gridstatevector_mod/gsv_allocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_allocate()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_readfromfile" title="f/gridstatevectorfileio_mod/gio_readfromfile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_readfromfile()</span></code></a>, <a class="reference internal" href="oceanmask_mod.html#f/oceanmask_mod/ocm_readmaskfromfile" title="f/oceanmask_mod/ocm_readmaskfromfile"><code class="xref f f-func docutils literal notranslate"><span class="pre">ocm_readmaskfromfile()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_propagateanalysiserror" title="f/analysiserroroi_mod/aer_propagateanalysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_propagateanalysiserror()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_copymask" title="f/gridstatevector_mod/gsv_copymask"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_copymask()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_modifydate" title="f/gridstatevector_mod/gsv_modifydate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_modifydate()</span></code></a>, <a class="reference internal" href="timecoord_mod.html#f/timecoord_mod/tim_getdatestamp" title="f/timecoord_mod/tim_getdatestamp"><code class="xref f f-func docutils literal notranslate"><span class="pre">tim_getdatestamp()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_writetofile" title="f/gridstatevectorfileio_mod/gio_writetofile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_writetofile()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_setvco" title="f/columndata_mod/col_setvco"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_setvco()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_allocate" title="f/columndata_mod/col_allocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_allocate()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_numheader" title="f/obsspacedata_mod/obs_numheader"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_numheader()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_tl" title="f/statetocolumn_mod/s2c_tl"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_tl()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_zero" title="f/gridstatevector_mod/gsv_zero"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_zero()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_deallocate" title="f/gridstatevector_mod/gsv_deallocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_deallocate()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/findobs" title="f/analysiserroroi_mod/findobs"><code class="xref f f-func docutils literal notranslate"><span class="pre">findobs()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_computeanlerrorstd" title="f/analysiserroroi_mod/aer_computeanlerrorstd"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_computeanlerrorstd()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_deallocate" title="f/columndata_mod/col_deallocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_deallocate()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_dayssincelastobs" title="f/analysiserroroi_mod/aer_dayssincelastobs"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_dayssincelastobs()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/findobs">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">findobs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">obsspacedata</span></em>, <em class="sig-param"><span class="pre">statevectortrlerrorstd</span></em>, <em class="sig-param"><span class="pre">numobs</span></em>, <em class="sig-param"><span class="pre">variablename</span></em>, <em class="sig-param"><span class="pre">lcorr</span></em>, <em class="sig-param"><span class="pre">influentobs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/findobs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>Find all observations used for the analysis.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>obsspacedata</strong><em> [</em><em>struct_obs </em><em>,</em><em>in</em><em>]</em> :: observation data structure</p></li>
+<li><p><strong>statevectortrlerrorstd</strong><em> [</em><em>struct_gsv </em><em>,</em><em>in</em><em>]</em> :: state containing background error stddev</p></li>
+<li><p><strong>numobs</strong> (*,*)<em> [</em><em>integer </em><em>,</em><em>out</em><em>]</em> :: number of observations found</p></li>
+<li><p><strong>variablename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: ‘GL’ for seaice or ‘TM’ for SST</p></li>
+<li><p><strong>lcorr</strong> (*,*)<em> [</em><em>real </em><em>,</em><em>in</em><em>]</em> :: horizontal background-error correlation length scale</p></li>
+<li><p><strong>influentobs</strong> (*,*)<em> [</em><em>struct_neighborhood </em><em>,</em><em>inout,pointer</em><em>]</em> :: details about observations to use in update</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_analysiserror" title="f/analysiserroroi_mod/aer_analysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_analysiserror()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_numheader" title="f/obsspacedata_mod/obs_numheader"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_numheader()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_numbody" title="f/obsspacedata_mod/obs_numbody"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_numbody()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_bodyelem_i" title="f/obsspacedata_mod/obs_bodyelem_i"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_bodyelem_i()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_headelem_i" title="f/obsspacedata_mod/obs_headelem_i"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_headelem_i()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_headelem_r" title="f/obsspacedata_mod/obs_headelem_r"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_headelem_r()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_getfootprintradius" title="f/statetocolumn_mod/s2c_getfootprintradius"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_getfootprintradius()</span></code></a>, <a class="reference internal" href="kdtree2_mod.html#f/kdtree2_mod/kdtree2_3dposition" title="f/kdtree2_mod/kdtree2_3dposition"><code class="xref f f-func docutils literal notranslate"><span class="pre">kdtree2_3dposition()</span></code></a>, <a class="reference internal" href="kdtree2_mod.html#f/kdtree2_mod/kdtree2_create" title="f/kdtree2_mod/kdtree2_create"><code class="xref f f-func docutils literal notranslate"><span class="pre">kdtree2_create()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_getweightsandgridpointindexes" title="f/statetocolumn_mod/s2c_getweightsandgridpointindexes"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_getweightsandgridpointindexes()</span></code></a>, <a class="reference internal" href="kdtree2_mod.html#f/kdtree2_mod/kdtree2_r_nearest" title="f/kdtree2_mod/kdtree2_r_nearest"><code class="xref f f-func docutils literal notranslate"><span class="pre">kdtree2_r_nearest()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/aer_dayssincelastobs">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">aer_dayssincelastobs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">obsspacedata</span></em>, <em class="sig-param"><span class="pre">hco_ptr</span></em>, <em class="sig-param"><span class="pre">vco_ptr</span></em>, <em class="sig-param"><span class="pre">inputfilename</span></em>, <em class="sig-param"><span class="pre">outputfilename</span></em>, <em class="sig-param"><span class="pre">variablename</span></em>, <em class="sig-param"><span class="pre">propagatedslo</span></em>, <em class="sig-param"><span class="pre">hourssincelastanalysis</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/aer_dayssincelastobs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>Update the field “days since last obs” with the newly assimilated obs.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>obsspacedata</strong><em> [</em><em>struct_obs </em><em>,</em><em>inout</em><em>]</em> :: observation data structure</p></li>
+<li><p><strong>hco_ptr</strong><em> [</em><em>struct_hco </em><em>,</em><em>in,pointer</em><em>]</em> :: horizontal grid definition</p></li>
+<li><p><strong>vco_ptr</strong><em> [</em><em>struct_vco </em><em>,</em><em>in,pointer</em><em>]</em> :: vertical grid definition</p></li>
+<li><p><strong>inputfilename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: input file name</p></li>
+<li><p><strong>outputfilename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: output file name</p></li>
+<li><p><strong>variablename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: name of variable being treated</p></li>
+<li><p><strong>propagatedslo</strong><em> [</em><em>logical </em><em>,</em><em>in</em><em>]</em> :: propagate (increase) Days Since Last Obs in time</p></li>
+<li><p><strong>hourssincelastanalysis</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em> :: number of hours between analysis times</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_analysiserror" title="f/analysiserroroi_mod/aer_analysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_analysiserror()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_allocate" title="f/gridstatevector_mod/gsv_allocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_allocate()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_numheader" title="f/obsspacedata_mod/obs_numheader"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_numheader()</span></code></a>, <a class="reference internal" href="#f/analysiserroroi_mod/aer_propagatedslo" title="f/analysiserroroi_mod/aer_propagatedslo"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_propagatedslo()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_readfromfile" title="f/gridstatevectorfileio_mod/gio_readfromfile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_readfromfile()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_copymask" title="f/gridstatevector_mod/gsv_copymask"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_copymask()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_setvco" title="f/columndata_mod/col_setvco"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_setvco()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_allocate" title="f/columndata_mod/col_allocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_allocate()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_tl" title="f/statetocolumn_mod/s2c_tl"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_tl()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_getnumlev" title="f/gridstatevector_mod/gsv_getnumlev"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_getnumlev()</span></code></a>, <a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod/vnl_varlevelfromvarname" title="f/varnamelist_mod/vnl_varlevelfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">vnl_varlevelfromvarname()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_headelem_i" title="f/obsspacedata_mod/obs_headelem_i"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_headelem_i()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_bodyelem_i" title="f/obsspacedata_mod/obs_bodyelem_i"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_bodyelem_i()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_getweightsandgridpointindexes" title="f/statetocolumn_mod/s2c_getweightsandgridpointindexes"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_getweightsandgridpointindexes()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_writetofile" title="f/gridstatevectorfileio_mod/gio_writetofile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_writetofile()</span></code></a>, <a class="reference internal" href="columndata_mod.html#f/columndata_mod/col_deallocate" title="f/columndata_mod/col_deallocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">col_deallocate()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_deallocate" title="f/gridstatevector_mod/gsv_deallocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_deallocate()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/aer_propagateanalysiserror">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">aer_propagateanalysiserror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">statevectorerrorstd</span></em>, <em class="sig-param"><span class="pre">oceanmask</span></em>, <em class="sig-param"><span class="pre">variablename</span></em>, <em class="sig-param"><span class="pre">analysisetiket</span></em>, <em class="sig-param"><span class="pre">errorgrowth</span></em>, <em class="sig-param"><span class="pre">hco_ptr</span></em>, <em class="sig-param"><span class="pre">vco_ptr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/aer_propagateanalysiserror" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>read analysis error standard deviation field and propagate it forward in time</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>statevectorerrorstd</strong><em> [</em><em>struct_gsv </em><em>,</em><em>inout</em><em>]</em> :: Input: analysis std error; Output: background std error.</p></li>
+<li><p><strong>oceanmask</strong><em> [</em><em>struct_ocm </em><em>,</em><em>in</em><em>]</em> :: ocean-land mask (1=water, 0=land)</p></li>
+<li><p><strong>variablename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: variable name</p></li>
+<li><p><strong>analysisetiket</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: analysis etiket in the input std file</p></li>
+<li><p><strong>errorgrowth</strong><em> [</em><em>real </em><em>,</em><em>in</em><em>]</em> :: seaice: fraction of ice per hour, SST: estimated growth</p></li>
+<li><p><strong>hco_ptr</strong><em> [</em><em>struct_hco </em><em>,</em><em>in,pointer</em><em>]</em> :: horizontal coordinates structure, pointer</p></li>
+<li><p><strong>vco_ptr</strong><em> [</em><em>struct_vco </em><em>,</em><em>in,pointer</em><em>]</em> :: vertical coordinates structure, pointer</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_analysiserror" title="f/analysiserroroi_mod/aer_analysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_analysiserror()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="message_mod.html#f/message_mod/msg" title="f/message_mod/msg"><code class="xref f f-func docutils literal notranslate"><span class="pre">msg()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_allocate" title="f/gridstatevector_mod/gsv_allocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_allocate()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_readfromfile" title="f/gridstatevectorfileio_mod/gio_readfromfile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_readfromfile()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_deallocate" title="f/gridstatevector_mod/gsv_deallocate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_deallocate()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/aer_propagatedslo">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">aer_propagatedslo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">statevectorerrorstd</span></em>, <em class="sig-param"><span class="pre">inputfilename</span></em>, <em class="sig-param"><span class="pre">outputfilename</span></em>, <em class="sig-param"><span class="pre">hourssincelastanalysis</span></em>, <em class="sig-param"><span class="pre">hco_ptr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/aer_propagatedslo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>propagate the field “days since last obs” in time.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>statevectorerrorstd</strong><em> [</em><em>struct_gsv </em><em>,</em><em>inout</em><em>]</em> :: read “analysis” into it and increase by hoursSinceLastAnalysis</p></li>
+<li><p><strong>inputfilename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: input file name</p></li>
+<li><p><strong>outputfilename</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: output file name</p></li>
+<li><p><strong>hourssincelastanalysis</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em> :: hours since last analysis (namelist variable)</p></li>
+<li><p><strong>hco_ptr</strong><em> [</em><em>struct_hco </em><em>,</em><em>in,pointer</em><em>]</em> :: horizontal grid definition</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_dayssincelastobs" title="f/analysiserroroi_mod/aer_dayssincelastobs"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_dayssincelastobs()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_readfromfile" title="f/gridstatevectorfileio_mod/gio_readfromfile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_readfromfile()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_modifydate" title="f/gridstatevector_mod/gsv_modifydate"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_modifydate()</span></code></a>, <a class="reference internal" href="timecoord_mod.html#f/timecoord_mod/tim_getdatestamp" title="f/timecoord_mod/tim_getdatestamp"><code class="xref f f-func docutils literal notranslate"><span class="pre">tim_getdatestamp()</span></code></a>, <a class="reference internal" href="gridstatevectorfileio_mod.html#f/gridstatevectorfileio_mod/gio_writetofile" title="f/gridstatevectorfileio_mod/gio_writetofile"><code class="xref f f-func docutils literal notranslate"><span class="pre">gio_writetofile()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/analysiserroroi_mod/aer_computeanlerrorstd">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">analysiserroroi_mod/</span></span><span class="sig-name descname"><span class="pre">aer_computeanlerrorstd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">obsspacedata</span></em>, <em class="sig-param"><span class="pre">statevectoranlerrorstd</span></em>, <em class="sig-param"><span class="pre">statevectortrlerrorstd</span></em>, <em class="sig-param"><span class="pre">analysisvariable</span></em>, <em class="sig-param"><span class="pre">maxanalysiserrorstddev</span></em>, <em class="sig-param"><span class="pre">influentobs</span></em>, <em class="sig-param"><span class="pre">lcorr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/analysiserroroi_mod/aer_computeanlerrorstd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>compute analysis error standard deviation for
+one analysis variable (grid point) at a time</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>obsspacedata</strong><em> [</em><em>struct_obs </em><em>,</em><em>in</em><em>]</em> :: obsSpaceData structure</p></li>
+<li><p><strong>statevectoranlerrorstd</strong><em> [</em><em>struct_gsv </em><em>,</em><em>inout</em><em>]</em> :: state vector for analysis error std deviation</p></li>
+<li><p><strong>statevectortrlerrorstd</strong><em> [</em><em>struct_gsv </em><em>,</em><em>in</em><em>]</em> :: state vector for background error std deviation</p></li>
+<li><p><strong>analysisvariable</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: variable name (‘GL’ or ‘TM’)</p></li>
+<li><p><strong>maxanalysiserrorstddev</strong><em> [</em><em>real </em><em>,</em><em>in</em><em>]</em> :: maximum limit imposed on analysis error stddev</p></li>
+<li><p><strong>influentobs</strong> (*,*)<em> [</em><em>struct_neighborhood </em><em>,</em><em>in,pointer</em><em>]</em> :: details about observations to use in update</p></li>
+<li><p><strong>lcorr</strong> (*,*)<em> [</em><em>real </em><em>,</em><em>in</em><em>]</em> :: horizontal background-error length scale</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/analysiserroroi_mod/aer_analysiserror" title="f/analysiserroroi_mod/aer_analysiserror"><code class="xref f f-func docutils literal notranslate"><span class="pre">aer_analysiserror()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="message_mod.html#f/message_mod/msg" title="f/message_mod/msg"><code class="xref f f-func docutils literal notranslate"><span class="pre">msg()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_tmg_start" title="f/utilities_mod/utl_tmg_start"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_tmg_start()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_numbody" title="f/obsspacedata_mod/obs_numbody"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_numbody()</span></code></a>, <a class="reference internal" href="obsoperators_mod.html#f/obsoperators_mod/oop_icescaling" title="f/obsoperators_mod/oop_icescaling"><code class="xref f f-func docutils literal notranslate"><span class="pre">oop_icescaling()</span></code></a>, <a class="reference internal" href="obsspacedata_mod.html#f/obsspacedata_mod/obs_bodyelem_r" title="f/obsspacedata_mod/obs_bodyelem_r"><code class="xref f f-func docutils literal notranslate"><span class="pre">obs_bodyelem_r()</span></code></a>, <a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod/gsv_getnumlev" title="f/gridstatevector_mod/gsv_getnumlev"><code class="xref f f-func docutils literal notranslate"><span class="pre">gsv_getnumlev()</span></code></a>, <a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod/vnl_varlevelfromvarname" title="f/varnamelist_mod/vnl_varlevelfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">vnl_varlevelfromvarname()</span></code></a>, <a class="reference internal" href="statetocolumn_mod.html#f/statetocolumn_mod/s2c_getweightsandgridpointindexes" title="f/statetocolumn_mod/s2c_getweightsandgridpointindexes"><code class="xref f f-func docutils literal notranslate"><span class="pre">s2c_getweightsandgridpointindexes()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a>, <a class="reference internal" href="physicsfunctions_mod.html#f/physicsfunctions_mod/phf_calcdistance" title="f/physicsfunctions_mod/phf_calcdistance"><code class="xref f f-func docutils literal notranslate"><span class="pre">phf_calcdistance()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_matinverse" title="f/utilities_mod/utl_matinverse"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_matinverse()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_tmg_stop" title="f/utilities_mod/utl_tmg_stop"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_tmg_stop()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="right" >
+          <a href="backgroundcheck_mod.html" title="backgroundCheck_mod"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../programs/midas_var.html" title="midas_var"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">analysisErrorOI_mod</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, ECCC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+==========================================
+obsSpaceErrorStdDev_mod
+==========================================
+
+    :doc:`link to source code <obsspaceerrorstddev_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /obsSpaceErrorStdDev_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /obsSpaceErrorStdDev_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: obsspaceerrorstddev_mod
+

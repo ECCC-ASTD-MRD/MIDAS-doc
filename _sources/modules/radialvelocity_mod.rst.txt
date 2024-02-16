@@ -1,0 +1,22 @@
+==========================================
+radialVelocity_mod
+==========================================
+
+    :doc:`link to source code <radialvelocity_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /radialVelocity_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /radialVelocity_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: radialvelocity_mod
+

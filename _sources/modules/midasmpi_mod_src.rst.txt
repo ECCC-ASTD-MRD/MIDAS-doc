@@ -1,0 +1,8 @@
+==========================================
+midasMpi_mod source
+==========================================
+
+    .. literalinclude:: ../_src_files/midasMpi_mod.f90
+       :language: fortran
+       :linenos:
+

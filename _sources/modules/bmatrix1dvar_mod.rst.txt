@@ -1,0 +1,22 @@
+==========================================
+bMatrix1DVar_mod
+==========================================
+
+    :doc:`link to source code <bmatrix1dvar_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /bMatrix1DVar_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /bMatrix1DVar_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: bmatrix1dvar_mod
+

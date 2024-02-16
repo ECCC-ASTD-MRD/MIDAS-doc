@@ -1,0 +1,17 @@
+==========================================
+midas_diagHBHt
+==========================================
+
+    :doc:`link to source code <midas_diagHBHt_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /midas_diagHBHt.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+
+    .. f:autoprogram:: midas_diagHBHt
+

@@ -1,0 +1,19 @@
+==========================================
+clibInterfaces_mod
+==========================================
+
+    :doc:`link to source code <clibinterfaces_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+      No Direct Dependency
+
+    .. figure:: /clibInterfaces_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: clibinterfaces_mod
+

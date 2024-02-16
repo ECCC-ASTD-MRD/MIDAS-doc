@@ -1,0 +1,22 @@
+==========================================
+bgckCSR_mod
+==========================================
+
+    :doc:`link to source code <bgckcsr_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /bgckCSR_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /bgckCSR_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: bgckcsr_mod
+

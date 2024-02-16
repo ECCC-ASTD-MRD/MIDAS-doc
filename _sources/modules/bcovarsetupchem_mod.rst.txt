@@ -1,0 +1,22 @@
+==========================================
+bCovarSetupChem_mod
+==========================================
+
+    :doc:`link to source code <bcovarsetupchem_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /bCovarSetupChem_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /bCovarSetupChem_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: bcovarsetupchem_mod
+

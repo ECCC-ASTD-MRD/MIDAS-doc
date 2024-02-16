@@ -1,0 +1,19 @@
+==========================================
+IndexListDepot_mod
+==========================================
+
+    :doc:`link to source code <indexlistdepot_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+      No Direct Dependency
+
+    .. figure:: /IndexListDepot_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: indexlistdepot_mod
+

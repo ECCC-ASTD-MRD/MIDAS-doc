@@ -1,0 +1,22 @@
+==========================================
+analysisErrorOI_mod
+==========================================
+
+    :doc:`link to source code <analysiserroroi_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /analysisErrorOI_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /analysisErrorOI_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: analysiserroroi_mod
+

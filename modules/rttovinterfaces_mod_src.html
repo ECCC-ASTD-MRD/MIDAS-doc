@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>rttovInterfaces_mod source &#8212; MIDAS  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+  <div>
+    <img src="../_static/MIDAS_header.png" alt="MIDAS" />
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">rttovInterfaces_mod source</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/rttovinterfaces_mod_src.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="rttovinterfaces-mod-source">
+<h1>rttovInterfaces_mod source<a class="headerlink" href="#rttovinterfaces-mod-source" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">module </span><span class="n">rttovInterfaces_mod</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="c">! MODULE rttovInterfaces_mod (prefix=&#39;&#39; category=&#39;9. Global interfaces&#39;)</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="c">!</span>
+<span class="linenos"> 4</span><span class="w">  </span><span class="c">!:Purpose: To *include* all of the needed files containing the interfaces</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="c">!           for the rttov library subroutines. This allows all other </span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="c">!           files in MIDAS to be of the *f90* type (instead of *ftn90*),</span>
+<span class="linenos"> 7</span><span class="w">  </span><span class="c">!           thus avoiding a pass through the pre-processor.</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="c">!</span>
+<span class="linenos"> 9</span><span class="k">implicit none</span>
+<span class="linenos">10</span><span class="k">public</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="cp">#include &quot;rttov_coeffname.interface&quot;</span>
+<span class="linenos">13</span><span class="cp">#include &quot;rttov_user_options_checkinput.interface&quot;</span>
+<span class="linenos">14</span><span class="cp">#include &quot;rttov_alloc_prof.interface&quot;</span>
+<span class="linenos">15</span><span class="cp">#include &quot;rttov_parallel_direct.interface&quot;</span>
+<span class="linenos">16</span><span class="cp">#include &quot;rttov_alloc_rad.interface&quot;</span>
+<span class="linenos">17</span><span class="cp">#include &quot;rttov_alloc_transmission.interface&quot;</span>
+<span class="linenos">18</span><span class="cp">#include &quot;rttov_alloc_direct.interface&quot;</span>
+<span class="linenos">19</span><span class="cp">#include &quot;rttov_alloc_tl.interface&quot;</span>
+<span class="linenos">20</span><span class="cp">#include &quot;rttov_alloc_ad.interface&quot;</span>
+<span class="linenos">21</span><span class="cp">#include &quot;rttov_print_profile.interface&quot;</span>
+<span class="linenos">22</span><span class="cp">#include &quot;rttov_get_emis.interface&quot;</span>
+<span class="linenos">23</span><span class="cp">#include &quot;rttov_setup_emis_atlas.interface&quot;</span>
+<span class="linenos">24</span><span class="cp">#include &quot;rttov_read_coefs.interface&quot;</span>
+<span class="linenos">25</span><span class="cp">#include &quot;rttov_dealloc_coefs.interface&quot;</span>
+<span class="linenos">26</span><span class="cp">#include &quot;rttov_nullify_coef.interface&quot;</span>
+<span class="linenos">27</span><span class="cp">#include &quot;rttov_parallel_tl.interface&quot;</span>
+<span class="linenos">28</span><span class="cp">#include &quot;rttov_parallel_ad.interface&quot;</span>
+<span class="linenos">29</span><span class="cp">#include &quot;rttov_direct.interface&quot;</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="cp">#include &quot;rttov_scatt.interface&quot;</span>
+<span class="linenos">32</span><span class="cp">#include &quot;rttov_scatt_tl.interface&quot;</span>
+<span class="linenos">33</span><span class="cp">#include &quot;rttov_scatt_ad.interface&quot;</span>
+<span class="linenos">34</span><span class="cp">#include &quot;rttov_alloc_scatt_prof.interface&quot;</span>
+<span class="linenos">35</span><span class="cp">#include &quot;rttov_read_scattcoeffs.interface&quot;</span>
+<span class="linenos">36</span><span class="cp">#include &quot;rttov_dealloc_scattcoeffs.interface&quot;</span>
+<span class="linenos">37</span><span class="cp">#include &quot;rttov_scatt_setupindex.interface&quot;</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="k">end module </span><span class="n">rttovInterfaces_mod</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">rttovInterfaces_mod source</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, ECCC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

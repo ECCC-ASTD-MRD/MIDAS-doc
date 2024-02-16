@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>verticalModes_mod &#8212; MIDAS  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="windRotation_mod" href="windrotation_mod.html" />
+    <link rel="prev" title="var1D_mod" href="var1d_mod.html" /> 
+  </head><body>
+  <div>
+    <img src="../_static/MIDAS_header.png" alt="MIDAS" />
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="right" >
+          <a href="windrotation_mod.html" title="windRotation_mod"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="var1d_mod.html" title="var1D_mod"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">verticalModes_mod</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="var1d_mod.html"
+                          title="previous chapter">var1D_mod</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="windrotation_mod.html"
+                          title="next chapter">windRotation_mod</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/verticalmodes_mod.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="verticalmodes-mod">
+<h1>verticalModes_mod<a class="headerlink" href="#verticalmodes-mod" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><a class="reference internal" href="verticalmodes_mod_src.html"><span class="doc">link to source code</span></a></p>
+<p><strong>Dependency Diagrams:</strong></p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="verticalModes_mod.svg"><img alt="verticalModes_mod.svg" height="100px" src="verticalModes_mod.svg" /></a>
+<figcaption>
+<p><span class="caption-text">Direct Dependency Diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="verticalModes_mod_rev.svg"><img alt="verticalModes_mod_rev.svg" height="100px" src="verticalModes_mod_rev.svg" /></a>
+<figcaption>
+<p><span class="caption-text">Reverse Dependency Diagram</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<span class="target" id="f/verticalmodes_mod"></span><p class="rubric">Description</p>
+<p>MODULE verticalModes_mod (prefix=’vms’ category=’4. Data Object transformations’)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Purpose</dt>
+<dd class="field-odd"><p>To 1) compute empirical orthogonal functions (EOFs) from either ensemble-derived
+vertical background-error covariances matrices or a prescribed vertical correlation
+function (i.e., the so-called vertical modes) and to 2) project back or forth
+ensemble pertubations onto these modes.
+Therefore, capablity #2 behaves like a spectral transform but in the vertical
+dimension.</p>
+</dd>
+</dl>
+<p class="rubric">Quick access</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/struct_vms" title="f/verticalmodes_mod/struct_vms"><code class="xref f f-var docutils literal notranslate"><span class="pre">struct_vms</span></code></a></p>
+</dd>
+<dt class="field-even">Routines</dt>
+<dd class="field-even"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_computemodes" title="f/verticalmodes_mod/vms_computemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodes()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromens" title="f/verticalmodes_mod/vms_computemodesfromens"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromens()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromfunction" title="f/verticalmodes_mod/vms_computemodesfromfunction"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromfunction()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_setup" title="f/verticalmodes_mod/vms_setup"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_setup()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_transform" title="f/verticalmodes_mod/vms_transform"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_transform()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_writemodes" title="f/verticalmodes_mod/vms_writemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_writemodes()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writearray1d_c4" title="f/verticalmodes_mod/writearray1d_c4"><code class="xref f f-func docutils literal notranslate"><span class="pre">writearray1d_c4()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writearray1d_r8" title="f/verticalmodes_mod/writearray1d_r8"><code class="xref f f-func docutils literal notranslate"><span class="pre">writearray1d_r8()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writematrix2d_r8" title="f/verticalmodes_mod/writematrix2d_r8"><code class="xref f f-func docutils literal notranslate"><span class="pre">writematrix2d_r8()</span></code></a></p>
+</dd>
+</dl>
+<p class="rubric">Needed modules</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="earthconstants_mod.html#f/earthconstants_mod" title="f/earthconstants_mod: MODULE earthConstants_mod (prefix='ec' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">earthconstants_mod</span></code></a>: MODULE earthConstants_mod (prefix=’ec’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod" title="f/utilities_mod: MODULE utilities_mod (prefix='utl' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">utilities_mod</span></code></a>: MODULE utilities_mod (prefix=’utl’ category=’8. Low-level utilities and constants’)</p></li>
+<li><p><a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod" title="f/varnamelist_mod: MODULE varNameList_mod (prefix='vnl' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">varnamelist_mod</span></code></a>: MODULE varNameList_mod (prefix=’vnl’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="horizontalcoord_mod.html#f/horizontalcoord_mod" title="f/horizontalcoord_mod: MODULE horizontalCoord_mod (prefix='hco' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">horizontalcoord_mod</span></code></a>: MODULE horizontalCoord_mod (prefix=’hco’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="verticalcoord_mod.html#f/verticalcoord_mod" title="f/verticalcoord_mod: MODULE verticalCoord_mod (prefix='vco' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">verticalcoord_mod</span></code></a>: MODULE verticalCoord_mod (prefix=’vco’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="localizationfunction_mod.html#f/localizationfunction_mod" title="f/localizationfunction_mod: MODULE localizationFunction_mod (prefix='lfn' category='2. B and R matrices')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">localizationfunction_mod</span></code></a>: MODULE localizationFunction_mod (prefix=’lfn’ category=’2. B and R matrices’)</p></li>
+<li><p><a class="reference internal" href="calcheightandpressure_mod.html#f/calcheightandpressure_mod" title="f/calcheightandpressure_mod: MODULE calcHeightAndPressure_mod (prefix='czp' category='4. Data Object transformations')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">calcheightandpressure_mod</span></code></a>: MODULE calcHeightAndPressure_mod (prefix=’czp’ category=’4. Data Object transformations’)</p></li>
+<li><p><a class="reference internal" href="gridstatevector_mod.html#f/gridstatevector_mod" title="f/gridstatevector_mod: MODULE gridStateVector_mod (prefix='gsv' category='6. High-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">gridstatevector_mod</span></code></a>: MODULE gridStateVector_mod (prefix=’gsv’ category=’6. High-level data objects’)</p></li>
+<li><p><a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod" title="f/ensemblestatevector_mod: MODULE ensembleStateVector_mod (prefix='ens' category='6. High-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">ensemblestatevector_mod</span></code></a>: MODULE ensembleStateVector_mod (prefix=’ens’ category=’6. High-level data objects’)</p></li>
+<li><p><a class="reference internal" href="timecoord_mod.html#f/timecoord_mod" title="f/timecoord_mod: MODULE timeCoord_mod (prefix='tim' category='7. Low-level data objects')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">timecoord_mod</span></code></a>: MODULE timeCoord_mod (prefix=’tim’ category=’7. Low-level data objects’)</p></li>
+<li><p><a class="reference internal" href="midasmpi_mod.html#f/midasmpi_mod" title="f/midasmpi_mod: MODULE midasMpi_mod (prefix='mmpi' category='8. Low-level utilities and constants')"><code class="xref f f-mod docutils literal notranslate"><span class="pre">midasmpi_mod</span></code></a>: MODULE midasMpi_mod (prefix=’mmpi’ category=’8. Low-level utilities and constants’)</p></li>
+</ul>
+<p class="rubric">Types</p>
+<ul>
+<li><dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/unknown_type">
+<em class="property"><span class="pre">type</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">unknown_type</span></span><a class="headerlink" href="#f/verticalmodes_mod/unknown_type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">autocovariance</span> (*,*)<em> [</em><em>real </em><em>,</em><em>allocatable</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">eigenvalues</span> (*)<em> [</em><em>real </em><em>,</em><em>allocatable</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">eigenvectors</span> (*,*)<em> [</em><em>real </em><em>,</em><em>allocatable</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">eigenvectorsinv</span> (*,*)<em> [</em><em>real </em><em>,</em><em>allocatable</em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">nlev</span><em> [</em><em>integer </em><em>]</em></p></li>
+<li><p><span class="sig-name descname">% </span><span class="sig-name descname">varname</span><em> [</em><em>character </em><em>]</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</li>
+<li><dl>
+<dt class="sig sig-object f">
+<em class="property"><span class="pre">type</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">unknown_type</span></span></dt>
+<dd></dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Variables</p>
+<ul>
+<li><dl class="f variable">
+<dt class="sig sig-object f" id="f/verticalmodes_mod/struct_vms">
+<span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">struct_vms</span></span><em> <span class="pre">[</span></em><em><span class="pre">public</span></em><em><span class="pre">]</span></em><a class="headerlink" href="#f/verticalmodes_mod/struct_vms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</li>
+</ul>
+<p class="rubric">Subroutines and functions</p>
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_setup">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varnameslist</span></em>, <em class="sig-param"><span class="pre">vco</span></em>, <em class="sig-param"><span class="pre">vmodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_setup" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To setup the vModes structure</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>varnameslist</strong> (*)<em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>vco</strong><em> [</em><em>struct_vco </em><em>,</em><em>in,pointer</em><em>]</em></p></li>
+<li><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>inout</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromens" title="f/verticalmodes_mod/vms_computemodesfromens"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromens()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromfunction" title="f/verticalmodes_mod/vms_computemodesfromfunction"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromfunction()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod/vnl_varlevelfromvarname" title="f/varnamelist_mod/vnl_varlevelfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">vnl_varlevelfromvarname()</span></code></a>, <a class="reference internal" href="verticalcoord_mod.html#f/verticalcoord_mod/vco_getnumlev" title="f/verticalcoord_mod/vco_getnumlev"><code class="xref f f-func docutils literal notranslate"><span class="pre">vco_getnumlev()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_computemodesfromens">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_computemodesfromens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ensperts</span></em>, <em class="sig-param"><span class="pre">vmodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_computemodesfromens" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To compute vertical modes from ensemble-derived
+vertical background-error covariances matrices</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ensperts</strong><em> [</em><em>struct_ens </em><em>,</em><em>inout</em><em>]</em></p></li>
+<li><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>inout</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Call to</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_varnameslist" title="f/ensemblestatevector_mod/ens_varnameslist"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_varnameslist()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_getvco" title="f/ensemblestatevector_mod/ens_getvco"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_getvco()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_setup" title="f/verticalmodes_mod/vms_setup"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_setup()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_getnummembers" title="f/ensemblestatevector_mod/ens_getnummembers"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_getnummembers()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_gethco" title="f/ensemblestatevector_mod/ens_gethco"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_gethco()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_getlatlonbounds" title="f/ensemblestatevector_mod/ens_getlatlonbounds"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_getlatlonbounds()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_getoffsetfromvarname" title="f/ensemblestatevector_mod/ens_getoffsetfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_getoffsetfromvarname()</span></code></a>, <a class="reference internal" href="ensemblestatevector_mod.html#f/ensemblestatevector_mod/ens_getonelev_r4" title="f/ensemblestatevector_mod/ens_getonelev_r4"><code class="xref f f-func docutils literal notranslate"><span class="pre">ens_getonelev_r4()</span></code></a>, <a class="reference internal" href="midasmpi_mod.html#f/midasmpi_mod/mmpi_allreduce_sumr8_2d" title="f/midasmpi_mod/mmpi_allreduce_sumr8_2d"><code class="xref f f-func docutils literal notranslate"><span class="pre">mmpi_allreduce_sumr8_2d()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodes" title="f/verticalmodes_mod/vms_computemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodes()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_computemodesfromfunction">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_computemodesfromfunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vco</span></em>, <em class="sig-param"><span class="pre">lengthscaletop</span></em>, <em class="sig-param"><span class="pre">lengthscalebot</span></em>, <em class="sig-param"><span class="pre">vmodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_computemodesfromfunction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To compute vertical modes from a prescribed correlation function</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>vco</strong><em> [</em><em>struct_vco </em><em>,</em><em>in,pointer</em><em>]</em></p></li>
+<li><p><strong>lengthscaletop</strong><em> [</em><em>real </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>lengthscalebot</strong><em> [</em><em>real </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>inout</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="calcstatsglb_mod.html#f/calcstatsglb_mod/csg_toolbox" title="f/calcstatsglb_mod/csg_toolbox"><code class="xref f f-func docutils literal notranslate"><span class="pre">csg_toolbox()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_setup" title="f/verticalmodes_mod/vms_setup"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_setup()</span></code></a>, <a class="reference internal" href="localizationfunction_mod.html#f/localizationfunction_mod/lfn_setup" title="f/localizationfunction_mod/lfn_setup"><code class="xref f f-func docutils literal notranslate"><span class="pre">lfn_setup()</span></code></a>, <a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod/vnl_varlevelfromvarname" title="f/varnamelist_mod/vnl_varlevelfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">vnl_varlevelfromvarname()</span></code></a>, <a class="reference internal" href="localizationfunction_mod.html#f/localizationfunction_mod/lfn_response" title="f/localizationfunction_mod/lfn_response"><code class="xref f f-func docutils literal notranslate"><span class="pre">lfn_response()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodes" title="f/verticalmodes_mod/vms_computemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodes()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_computemodes">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_computemodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vmodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_computemodes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>Compute vertical modes from the vertical covariances matrices
+contained in the vModes structure.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>inout</em><em>]</em></p>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromens" title="f/verticalmodes_mod/vms_computemodesfromens"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromens()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/vms_computemodesfromfunction" title="f/verticalmodes_mod/vms_computemodesfromfunction"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_computemodesfromfunction()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_eigendecomp" title="f/utilities_mod/utl_eigendecomp"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_eigendecomp()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_transform">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vmodes</span></em>, <em class="sig-param"><span class="pre">vertmodesstate</span></em>, <em class="sig-param"><span class="pre">gridstate</span></em>, <em class="sig-param"><span class="pre">transformdirection</span></em>, <em class="sig-param"><span class="pre">lonbeg</span></em>, <em class="sig-param"><span class="pre">lonend</span></em>, <em class="sig-param"><span class="pre">latbeg</span></em>, <em class="sig-param"><span class="pre">latend</span></em>, <em class="sig-param"><span class="pre">nlev</span></em>, <em class="sig-param"><span class="pre">varname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_transform" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To project back or forth ensemble pertubations onto the vertical
+modes contained in the vModes structure.</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>vertmodesstate</strong> (lonend-lonbeg+1,latend-latbeg+1,nlev)<em> [</em><em>real </em><em>,</em><em>inout</em><em>]</em> :: 3D vertical modes coefficients</p></li>
+<li><p><strong>gridstate</strong> (lonend-lonbeg+1,latend-latbeg+1,nlev)<em> [</em><em>real </em><em>,</em><em>inout</em><em>]</em> :: 3D field in grid point space</p></li>
+<li><p><strong>transformdirection</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em> :: VertModesToGridPoint or GridPointToVertModes</p></li>
+<li><p><strong>lonbeg</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>lonend</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>latbeg</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>latend</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>nlev</strong><em> [</em><em>integer </em><em>,</em><em>in,</em><em>]</em></p></li>
+<li><p><strong>varname</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="calcstatsglb_mod.html#f/calcstatsglb_mod/calcvertmodesspec" title="f/calcstatsglb_mod/calcvertmodesspec"><code class="xref f f-func docutils literal notranslate"><span class="pre">calcvertmodesspec()</span></code></a>, <a class="reference internal" href="calcstatsglb_mod.html#f/calcstatsglb_mod/vertmodesfilter" title="f/calcstatsglb_mod/vertmodesfilter"><code class="xref f f-func docutils literal notranslate"><span class="pre">vertmodesfilter()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="varnamelist_mod.html#f/varnamelist_mod/vnl_varlevelfromvarname" title="f/varnamelist_mod/vnl_varlevelfromvarname"><code class="xref f f-func docutils literal notranslate"><span class="pre">vnl_varlevelfromvarname()</span></code></a>, <a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/vms_writemodes">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">vms_writemodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vmodes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/vms_writemodes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To write the content of the provided vModes structure</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><p><strong>vmodes</strong><em> [</em><em>struct_vms </em><em>,</em><em>in</em><em>]</em></p>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="calcstatsglb_mod.html#f/calcstatsglb_mod/csg_toolbox" title="f/calcstatsglb_mod/csg_toolbox"><code class="xref f f-func docutils literal notranslate"><span class="pre">csg_toolbox()</span></code></a></p>
+</dd>
+<dt class="field-even">Call to</dt>
+<dd class="field-even"><p><a class="reference internal" href="utilities_mod.html#f/utilities_mod/utl_abort" title="f/utilities_mod/utl_abort"><code class="xref f f-func docutils literal notranslate"><span class="pre">utl_abort()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writematrix2d_r8" title="f/verticalmodes_mod/writematrix2d_r8"><code class="xref f f-func docutils literal notranslate"><span class="pre">writematrix2d_r8()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writearray1d_r8" title="f/verticalmodes_mod/writearray1d_r8"><code class="xref f f-func docutils literal notranslate"><span class="pre">writearray1d_r8()</span></code></a>, <a class="reference internal" href="#f/verticalmodes_mod/writearray1d_c4" title="f/verticalmodes_mod/writearray1d_c4"><code class="xref f f-func docutils literal notranslate"><span class="pre">writearray1d_c4()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/writematrix2d_r8">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">writematrix2d_r8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">matrix2d</span></em>, <em class="sig-param"><span class="pre">rank_bn</span></em>, <em class="sig-param"><span class="pre">iun</span></em>, <em class="sig-param"><span class="pre">nomvar_in</span></em>, <em class="sig-param"><span class="pre">etiket_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/writematrix2d_r8" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To write a 2D matrix rank x rank</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>matrix2d</strong> (rank_bn,rank_bn)<em> [</em><em>real </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>rank_bn</strong><em> [</em><em>integer </em><em>,</em><em>in,</em><em>]</em></p></li>
+<li><p><strong>iun</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>nomvar_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>etiket_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_writemodes" title="f/verticalmodes_mod/vms_writemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_writemodes()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/writearray1d_r8">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">writearray1d_r8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">array</span></em>, <em class="sig-param"><span class="pre">size_bn</span></em>, <em class="sig-param"><span class="pre">iun</span></em>, <em class="sig-param"><span class="pre">nomvar_in</span></em>, <em class="sig-param"><span class="pre">etiket_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/writearray1d_r8" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To write a 1D array in real 8</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>array</strong> (size_bn)<em> [</em><em>real </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>size_bn</strong><em> [</em><em>integer </em><em>,</em><em>in,</em><em>]</em></p></li>
+<li><p><strong>iun</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>nomvar_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>etiket_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_writemodes" title="f/verticalmodes_mod/vms_writemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_writemodes()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object f" id="f/verticalmodes_mod/writearray1d_c4">
+<em class="property"><span class="pre">subroutine</span>&#160; </em><span class="sig-prename descclassname"><span class="pre">verticalmodes_mod/</span></span><span class="sig-name descname"><span class="pre">writearray1d_c4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">array</span></em>, <em class="sig-param"><span class="pre">size_bn</span></em>, <em class="sig-param"><span class="pre">iun</span></em>, <em class="sig-param"><span class="pre">nomvar_in</span></em>, <em class="sig-param"><span class="pre">etiket_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#f/verticalmodes_mod/writearray1d_c4" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Purpose </dt>
+<dd class="field-odd"><p>To write a 1D array in character with len = 4</p>
+</dd>
+<dt class="field-even">Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>array</strong> (size_bn)<em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>size_bn</strong><em> [</em><em>integer </em><em>,</em><em>in,</em><em>]</em></p></li>
+<li><p><strong>iun</strong><em> [</em><em>integer </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>nomvar_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+<li><p><strong>etiket_in</strong><em> [</em><em>character </em><em>,</em><em>in</em><em>]</em></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Called from</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#f/verticalmodes_mod/vms_writemodes" title="f/verticalmodes_mod/vms_writemodes"><code class="xref f f-func docutils literal notranslate"><span class="pre">vms_writemodes()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="right" >
+          <a href="windrotation_mod.html" title="windRotation_mod"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="var1d_mod.html" title="var1D_mod"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">verticalModes_mod</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, ECCC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

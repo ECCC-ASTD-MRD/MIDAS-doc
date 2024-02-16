@@ -1,0 +1,8 @@
+==========================================
+midas_extractBmatrixFor1Dvar source
+==========================================
+
+    .. literalinclude:: ../_src_files/extractBmatrixFor1Dvar.f90
+       :language: fortran
+       :linenos:
+

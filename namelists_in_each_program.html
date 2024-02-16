@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Namelists used in each MIDAS program &#8212; MIDAS  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+  <div>
+    <img src="_static/MIDAS_header.png" alt="MIDAS" />
+  </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Namelists used in each MIDAS program</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Namelists used in each MIDAS program</a><ul>
+<li><a class="reference internal" href="#adjointtest">adjointTest</a></li>
+<li><a class="reference internal" href="#analysiserroroi">analysisErrorOI</a></li>
+<li><a class="reference internal" href="#calcstats">calcStats</a></li>
+<li><a class="reference internal" href="#diagbmatrix">diagBmatrix</a></li>
+<li><a class="reference internal" href="#diaghbht">diagHBHt</a></li>
+<li><a class="reference internal" href="#ensembleh">ensembleH</a></li>
+<li><a class="reference internal" href="#enspostprocess">ensPostProcess</a></li>
+<li><a class="reference internal" href="#extractbmatrixfor1dvar">extractBmatrixFor1Dvar</a></li>
+<li><a class="reference internal" href="#gencoeff">genCoeff</a></li>
+<li><a class="reference internal" href="#letkf">letkf</a></li>
+<li><a class="reference internal" href="#obsimpact">obsImpact</a></li>
+<li><a class="reference internal" href="#obsselection">obsSelection</a></li>
+<li><a class="reference internal" href="#ominusf">oMinusF</a></li>
+<li><a class="reference internal" href="#prepcma">prepcma</a></li>
+<li><a class="reference internal" href="#pseudosstobs">pseudoSSTobs</a></li>
+<li><a class="reference internal" href="#randompert">randomPert</a></li>
+<li><a class="reference internal" href="#sstbias">sstBias</a></li>
+<li><a class="reference internal" href="#ssttrial">sstTrial</a></li>
+<li><a class="reference internal" href="#thinning">thinning</a></li>
+<li><a class="reference internal" href="#var1d">var1D</a></li>
+<li><a class="reference internal" href="#var">var</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/namelists_in_each_program.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="namelists-used-in-each-midas-program">
+<h1>Namelists used in each MIDAS program<a class="headerlink" href="#namelists-used-in-each-midas-program" title="Permalink to this headline">¶</a></h1>
+<section id="adjointtest">
+<h2>adjointTest<a class="headerlink" href="#adjointtest" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMADT">namadt</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBEN">namben</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBHI">nambhi</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+</ul>
+</section>
+<section id="analysiserroroi">
+<h2>analysisErrorOI<a class="headerlink" href="#analysiserroroi" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMAER">namaer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMFILT">namfilt</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMMSG">nammsg</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMPLATFORMICE">namplatformice</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMRADVEL">namradvel</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="calcstats">
+<h2>calcStats<a class="headerlink" href="#calcstats" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMCOMPUTEBHI">namcomputebhi</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMCONF">namconf</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENS">namens</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOOLBOX">namtoolbox</a></p></li>
+</ul>
+</section>
+<section id="diagbmatrix">
+<h2>diagBmatrix<a class="headerlink" href="#diagbmatrix" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBEN">namben</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIAG">namdiag</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMVNL">namvnl</a></p></li>
+</ul>
+</section>
+<section id="diaghbht">
+<h2>diagHBHt<a class="headerlink" href="#diaghbht" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMS2C">nams2c</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSURFACEOBS">namsurfaceobs</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="ensembleh">
+<h2>ensembleH<a class="headerlink" href="#ensembleh" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSEMBLEH">namensembleh</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSOBS">namensobs</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMS2C">nams2c</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="enspostprocess">
+<h2>ensPostProcess<a class="headerlink" href="#enspostprocess" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMENSPOSTPROC">namenspostproc</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSPOSTPROCMODULE">namenspostprocmodule</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+</ul>
+</section>
+<section id="extractbmatrixfor1dvar">
+<h2>extractBmatrixFor1Dvar<a class="headerlink" href="#extractbmatrixfor1dvar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMEXTRACT">namextract</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMVNL">namvnl</a></p></li>
+</ul>
+</section>
+<section id="gencoeff">
+<h2>genCoeff<a class="headerlink" href="#gencoeff" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBIASSAT">nambiassat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="letkf">
+<h2>letkf<a class="headerlink" href="#letkf" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMCHANOFFSET">namchanoffset</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSOBS">namensobs</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSPOSTPROCMODULE">namenspostprocmodule</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMFILT">namfilt</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEO">namgeo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEOBUFR">namgeobufr</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMHYPER">namhyper</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINST">naminst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMLETKF">namletkf</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMPLATFORMICE">namplatformice</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMRADVEL">namradvel</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMS2C">nams2c</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSAT">namsat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOV">namtov</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOVSINST">namtovsinst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="obsimpact">
+<h2>obsImpact<a class="headerlink" href="#obsimpact" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMFSO">namfso</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="obsselection">
+<h2>obsSelection<a class="headerlink" href="#obsselection" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBGCK">nambgck</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBGCKCONV">nambgckconv</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBGCKIR">nambgckir</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBIASCONV">nambiasconv</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBIASSAT">nambiassat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMCSR">namcsr</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEM">namgem</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMICEBGCHECK">namicebgcheck</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOBSSELECTION">namobsselection</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOCEANBGCHECK">namoceanbgcheck</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSONDETYPES">namsondetypes</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTBIASESTIMATE">namsstbiasestimate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="ominusf">
+<h2>oMinusF<a class="headerlink" href="#ominusf" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBIASSAT">nambiassat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMENSOBS">namensobs</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOMF">namomf</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="prepcma">
+<h2>prepcma<a class="headerlink" href="#prepcma" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMADDTOBURP">namaddtoburp</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMCHANOFFSET">namchanoffset</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMFILT">namfilt</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEO">namgeo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEOBUFR">namgeobufr</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMHYPER">namhyper</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINST">naminst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMPLATFORMICE">namplatformice</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMPREPCMA">namprepcma</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMRADVEL">namradvel</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSAT">namsat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOV">namtov</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOVSINST">namtovsinst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="pseudosstobs">
+<h2>pseudoSSTobs<a class="headerlink" href="#pseudosstobs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#PSEUDOSSTOBS">pseudosstobs</a></p></li>
+</ul>
+</section>
+<section id="randompert">
+<h2>randomPert<a class="headerlink" href="#randompert" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMENKF">namenkf</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINT">namint</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+</ul>
+</section>
+<section id="sstbias">
+<h2>sstBias<a class="headerlink" href="#sstbias" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTBIASESTIMATE">namsstbiasestimate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="ssttrial">
+<h2>sstTrial<a class="headerlink" href="#ssttrial" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMSSTTRIAL">namssttrial</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+</ul>
+</section>
+<section id="thinning">
+<h2>thinning<a class="headerlink" href="#thinning" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMCHANOFFSET">namchanoffset</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMFILT">namfilt</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEM">namgem</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEO">namgeo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEOBUFR">namgeobufr</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMHYPER">namhyper</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINST">naminst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMPLATFORMICE">namplatformice</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMRADVEL">namradvel</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSAT">namsat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOV">namtov</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOVSINST">namtovsinst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="var1d">
+<h2>var1D<a class="headerlink" href="#var1d" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBIASSAT">nambiassat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMBMAT1D">nambmat1d</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINC">naminc</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMMIN">nammin</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+</section>
+<section id="var">
+<h2>var<a class="headerlink" href="#var" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="namelists.html#NAMBIASSAT">nambiassat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMCHANOFFSET">namchanoffset</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMDIMO">namdimo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEO">namgeo</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMGEOBUFR">namgeobufr</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMHYPER">namhyper</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINC">naminc</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINN">naminn</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMINST">naminst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMMIN">nammin</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMMSG">nammsg</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOER">namoer</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMOSD">namosd</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMQLIM">namqlim</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMRMAT">namrmat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMS2C">nams2c</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSAT">namsat</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSSTOBSERRORS">namsstobserrors</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTATE">namstate</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMSTIO">namstio</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTIME">namtime</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOV">namtov</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMTOVSINST">namtovsinst</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMVAR">namvar</a></p></li>
+<li><p><a class="reference external" href="namelists.html#NAMWRITEDIAG">namwritediag</a></p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="f-modindex.html" title="Fortran Module Index"
+             >fortran modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MIDAS  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Namelists used in each MIDAS program</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, ECCC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

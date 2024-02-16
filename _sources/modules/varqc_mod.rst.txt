@@ -1,0 +1,22 @@
+==========================================
+varQC_mod
+==========================================
+
+    :doc:`link to source code <varqc_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /varQC_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /varQC_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: varqc_mod
+

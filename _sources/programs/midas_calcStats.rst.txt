@@ -1,0 +1,17 @@
+==========================================
+midas_calcStats
+==========================================
+
+    :doc:`link to source code <midas_calcStats_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /midas_calcStats.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+
+    .. f:autoprogram:: midas_calcStats
+

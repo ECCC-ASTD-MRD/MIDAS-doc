@@ -1,0 +1,22 @@
+==========================================
+costFunction_mod
+==========================================
+
+    :doc:`link to source code <costfunction_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /costFunction_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /costFunction_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: costfunction_mod
+

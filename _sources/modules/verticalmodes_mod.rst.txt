@@ -1,0 +1,22 @@
+==========================================
+verticalModes_mod
+==========================================
+
+    :doc:`link to source code <verticalmodes_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /verticalModes_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /verticalModes_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: verticalmodes_mod
+

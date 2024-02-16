@@ -1,0 +1,22 @@
+==========================================
+humidityLimits_mod
+==========================================
+
+    :doc:`link to source code <humiditylimits_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /humidityLimits_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /humidityLimits_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: humiditylimits_mod
+

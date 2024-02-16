@@ -1,0 +1,22 @@
+==========================================
+rMatrix_mod
+==========================================
+
+    :doc:`link to source code <rmatrix_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /rMatrix_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /rMatrix_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: rmatrix_mod
+

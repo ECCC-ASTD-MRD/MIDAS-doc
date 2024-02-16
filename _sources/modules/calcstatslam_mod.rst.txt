@@ -1,0 +1,22 @@
+==========================================
+calcStatsLam_mod
+==========================================
+
+    :doc:`link to source code <calcstatslam_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /calcStatsLam_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /calcStatsLam_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: calcstatslam_mod
+

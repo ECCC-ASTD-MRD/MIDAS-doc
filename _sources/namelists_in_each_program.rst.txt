@@ -1,0 +1,302 @@
+
+Namelists used in each MIDAS program
+====================================
+
+========================================
+adjointTest
+========================================
+- `namadt <namelists.html#NAMADT>`_
+- `namben <namelists.html#NAMBEN>`_
+- `nambhi <namelists.html#NAMBHI>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+
+========================================
+analysisErrorOI
+========================================
+- `namaer <namelists.html#NAMAER>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namfilt <namelists.html#NAMFILT>`_
+- `naminn <namelists.html#NAMINN>`_
+- `nammsg <namelists.html#NAMMSG>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namplatformice <namelists.html#NAMPLATFORMICE>`_
+- `namradvel <namelists.html#NAMRADVEL>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+calcStats
+========================================
+- `namcomputebhi <namelists.html#NAMCOMPUTEBHI>`_
+- `namconf <namelists.html#NAMCONF>`_
+- `namens <namelists.html#NAMENS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namtoolbox <namelists.html#NAMTOOLBOX>`_
+
+========================================
+diagBmatrix
+========================================
+- `namben <namelists.html#NAMBEN>`_
+- `namdiag <namelists.html#NAMDIAG>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namvnl <namelists.html#NAMVNL>`_
+
+========================================
+diagHBHt
+========================================
+- `namdimo <namelists.html#NAMDIMO>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namoer <namelists.html#NAMOER>`_
+- `nams2c <namelists.html#NAMS2C>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namsurfaceobs <namelists.html#NAMSURFACEOBS>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+ensembleH
+========================================
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namensembleh <namelists.html#NAMENSEMBLEH>`_
+- `namensobs <namelists.html#NAMENSOBS>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namoer <namelists.html#NAMOER>`_
+- `nams2c <namelists.html#NAMS2C>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+ensPostProcess
+========================================
+- `namenspostproc <namelists.html#NAMENSPOSTPROC>`_
+- `namenspostprocmodule <namelists.html#NAMENSPOSTPROCMODULE>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+
+========================================
+extractBmatrixFor1Dvar
+========================================
+- `namextract <namelists.html#NAMEXTRACT>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namvnl <namelists.html#NAMVNL>`_
+
+========================================
+genCoeff
+========================================
+- `nambiassat <namelists.html#NAMBIASSAT>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+letkf
+========================================
+- `namchanoffset <namelists.html#NAMCHANOFFSET>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namensobs <namelists.html#NAMENSOBS>`_
+- `namenspostprocmodule <namelists.html#NAMENSPOSTPROCMODULE>`_
+- `namfilt <namelists.html#NAMFILT>`_
+- `namgeo <namelists.html#NAMGEO>`_
+- `namgeobufr <namelists.html#NAMGEOBUFR>`_
+- `namhyper <namelists.html#NAMHYPER>`_
+- `naminn <namelists.html#NAMINN>`_
+- `naminst <namelists.html#NAMINST>`_
+- `namletkf <namelists.html#NAMLETKF>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namplatformice <namelists.html#NAMPLATFORMICE>`_
+- `namradvel <namelists.html#NAMRADVEL>`_
+- `nams2c <namelists.html#NAMS2C>`_
+- `namsat <namelists.html#NAMSAT>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namtov <namelists.html#NAMTOV>`_
+- `namtovsinst <namelists.html#NAMTOVSINST>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+obsImpact
+========================================
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namfso <namelists.html#NAMFSO>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+obsSelection
+========================================
+- `nambgck <namelists.html#NAMBGCK>`_
+- `nambgckconv <namelists.html#NAMBGCKCONV>`_
+- `nambgckir <namelists.html#NAMBGCKIR>`_
+- `nambiasconv <namelists.html#NAMBIASCONV>`_
+- `nambiassat <namelists.html#NAMBIASSAT>`_
+- `namcsr <namelists.html#NAMCSR>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namgem <namelists.html#NAMGEM>`_
+- `namicebgcheck <namelists.html#NAMICEBGCHECK>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namobsselection <namelists.html#NAMOBSSELECTION>`_
+- `namoceanbgcheck <namelists.html#NAMOCEANBGCHECK>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namsondetypes <namelists.html#NAMSONDETYPES>`_
+- `namsstbiasestimate <namelists.html#NAMSSTBIASESTIMATE>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+oMinusF
+========================================
+- `nambiassat <namelists.html#NAMBIASSAT>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namensobs <namelists.html#NAMENSOBS>`_
+- `namomf <namelists.html#NAMOMF>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+prepcma
+========================================
+- `namaddtoburp <namelists.html#NAMADDTOBURP>`_
+- `namchanoffset <namelists.html#NAMCHANOFFSET>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namfilt <namelists.html#NAMFILT>`_
+- `namgeo <namelists.html#NAMGEO>`_
+- `namgeobufr <namelists.html#NAMGEOBUFR>`_
+- `namhyper <namelists.html#NAMHYPER>`_
+- `naminst <namelists.html#NAMINST>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namplatformice <namelists.html#NAMPLATFORMICE>`_
+- `namprepcma <namelists.html#NAMPREPCMA>`_
+- `namradvel <namelists.html#NAMRADVEL>`_
+- `namsat <namelists.html#NAMSAT>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namtov <namelists.html#NAMTOV>`_
+- `namtovsinst <namelists.html#NAMTOVSINST>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+pseudoSSTobs
+========================================
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `pseudosstobs <namelists.html#PSEUDOSSTOBS>`_
+
+========================================
+randomPert
+========================================
+- `namenkf <namelists.html#NAMENKF>`_
+- `namint <namelists.html#NAMINT>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+
+========================================
+sstBias
+========================================
+- `namdimo <namelists.html#NAMDIMO>`_
+- `naminn <namelists.html#NAMINN>`_
+- `namsstbiasestimate <namelists.html#NAMSSTBIASESTIMATE>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+sstTrial
+========================================
+- `namssttrial <namelists.html#NAMSSTTRIAL>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namtime <namelists.html#NAMTIME>`_
+
+========================================
+thinning
+========================================
+- `namchanoffset <namelists.html#NAMCHANOFFSET>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namfilt <namelists.html#NAMFILT>`_
+- `namgem <namelists.html#NAMGEM>`_
+- `namgeo <namelists.html#NAMGEO>`_
+- `namgeobufr <namelists.html#NAMGEOBUFR>`_
+- `namhyper <namelists.html#NAMHYPER>`_
+- `naminst <namelists.html#NAMINST>`_
+- `namplatformice <namelists.html#NAMPLATFORMICE>`_
+- `namradvel <namelists.html#NAMRADVEL>`_
+- `namsat <namelists.html#NAMSAT>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namtov <namelists.html#NAMTOV>`_
+- `namtovsinst <namelists.html#NAMTOVSINST>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+var1D
+========================================
+- `nambiassat <namelists.html#NAMBIASSAT>`_
+- `nambmat1d <namelists.html#NAMBMAT1D>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `naminc <namelists.html#NAMINC>`_
+- `naminn <namelists.html#NAMINN>`_
+- `nammin <namelists.html#NAMMIN>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================
+var
+========================================
+- `nambiassat <namelists.html#NAMBIASSAT>`_
+- `namchanoffset <namelists.html#NAMCHANOFFSET>`_
+- `namdimo <namelists.html#NAMDIMO>`_
+- `namgeo <namelists.html#NAMGEO>`_
+- `namgeobufr <namelists.html#NAMGEOBUFR>`_
+- `namhyper <namelists.html#NAMHYPER>`_
+- `naminc <namelists.html#NAMINC>`_
+- `naminn <namelists.html#NAMINN>`_
+- `naminst <namelists.html#NAMINST>`_
+- `nammin <namelists.html#NAMMIN>`_
+- `nammsg <namelists.html#NAMMSG>`_
+- `namoer <namelists.html#NAMOER>`_
+- `namosd <namelists.html#NAMOSD>`_
+- `namqlim <namelists.html#NAMQLIM>`_
+- `namrmat <namelists.html#NAMRMAT>`_
+- `nams2c <namelists.html#NAMS2C>`_
+- `namsat <namelists.html#NAMSAT>`_
+- `namsstobserrors <namelists.html#NAMSSTOBSERRORS>`_
+- `namstate <namelists.html#NAMSTATE>`_
+- `namstio <namelists.html#NAMSTIO>`_
+- `namtime <namelists.html#NAMTIME>`_
+- `namtov <namelists.html#NAMTOV>`_
+- `namtovsinst <namelists.html#NAMTOVSINST>`_
+- `namvar <namelists.html#NAMVAR>`_
+- `namwritediag <namelists.html#NAMWRITEDIAG>`_
+
+========================================

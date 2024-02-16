@@ -1,0 +1,8 @@
+==========================================
+bMatrixHI_mod source
+==========================================
+
+    .. literalinclude:: ../_src_files/bMatrixHI_mod.f90
+       :language: fortran
+       :linenos:
+

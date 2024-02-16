@@ -1,0 +1,22 @@
+==========================================
+kdTree2_mod
+==========================================
+
+    :doc:`link to source code <kdtree2_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /kdTree2_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /kdTree2_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: kdtree2_mod
+

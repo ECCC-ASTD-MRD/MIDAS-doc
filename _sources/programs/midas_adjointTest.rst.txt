@@ -1,0 +1,17 @@
+==========================================
+midas_adjointTest
+==========================================
+
+    :doc:`link to source code <midas_adjointTest_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /midas_adjointTest.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+
+    .. f:autoprogram:: midas_adjointTest
+

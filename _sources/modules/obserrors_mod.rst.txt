@@ -1,0 +1,22 @@
+==========================================
+obsErrors_mod
+==========================================
+
+    :doc:`link to source code <obserrors_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /obsErrors_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /obsErrors_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: obserrors_mod
+

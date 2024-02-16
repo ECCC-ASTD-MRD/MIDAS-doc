@@ -1,0 +1,22 @@
+==========================================
+horizontalCoord_mod
+==========================================
+
+    :doc:`link to source code <horizontalcoord_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /horizontalCoord_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /horizontalCoord_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: horizontalcoord_mod
+

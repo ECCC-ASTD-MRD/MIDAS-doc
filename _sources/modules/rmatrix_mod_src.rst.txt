@@ -1,0 +1,8 @@
+==========================================
+rMatrix_mod source
+==========================================
+
+    .. literalinclude:: ../_src_files/rMatrix_mod.f90
+       :language: fortran
+       :linenos:
+

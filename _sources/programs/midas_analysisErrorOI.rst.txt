@@ -1,0 +1,17 @@
+==========================================
+midas_analysisErrorOI
+==========================================
+
+    :doc:`link to source code <midas_analysisErrorOI_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /midas_analysisErrorOI.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+
+    .. f:autoprogram:: midas_analysisErrorOI
+

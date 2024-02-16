@@ -1,0 +1,22 @@
+==========================================
+calcStatsGlb_mod
+==========================================
+
+    :doc:`link to source code <calcstatsglb_mod_src>`
+
+
+    **Dependency Diagrams:**
+
+    .. figure:: /calcStatsGlb_mod.svg
+        :height: 100px
+
+        Direct Dependency Diagram
+
+    .. figure:: /calcStatsGlb_mod_rev.svg
+        :height: 100px
+
+        Reverse Dependency Diagram
+
+
+    .. f:automodule:: calcstatsglb_mod
+
